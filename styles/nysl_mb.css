@@ -167,31 +167,23 @@ footer {
 }
 /* ------------- GLOBAL ------------ */
 .fixed-scroller{
-    /* display: none; */
-    visibility: hidden;
-    bottom:25px;
-    height: 0;
-    width: 0;
-    z-index: 100;
-    position: fixed;
-    right:50%;
-    margin-right: -525px;
-}
-.fixed-scroller.active {
-    visibility: visible;
     display: block;
     height: 50px;
     width: 50px;
-    /* background-color: rgba(4,56,79, 1); */
     z-index: 100;
+    position: fixed;
+    right:0;
+    bottom:25px;
+    margin-right: -50px;
+    transition: .5s ease;
+}
+.fixed-scroller.active {
     right:50%;
     margin-right: -525px;
-    bottom: 25px;
-    transition: .5s ease;
     opacity: 0.6;
     cursor: pointer;
 }
-.fixed-scroller.active i{
+.fixed-scroller i{
     color: rgba(4,56,79, 1);
     font-size: 50px;
     line-height: 50px;
