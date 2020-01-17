@@ -1,6 +1,3 @@
-
-
-
 function clickTest(){
     console.log('Clicked!');
     console.log(this.getAttribute('data-url'));
@@ -20,4 +17,21 @@ window.onload = function () {
     for (let i=0; i<locations.length; i++){
         locations[i].addEventListener("click", mapActivate);
     }
+    // document.querySelector('#scroll_btn').addEventListener("click", scrollUp); //click for scrollup
 }
+
+var scrollVisible = function() { //makes scroll btn visible if page is longer than (x)px
+    let btn = document.querySelector('#scroll_btn');
+    let height = 400;
+    var y = window.scrollY;
+    if (btn.classList.contains('active')){
+        if (y <= height){ 
+            btn.classList.toggle('active');
+        }
+    } else if (y > height){
+        btn.classList.toggle('active');        
+    }
+    // console.log(y);
+};
+
+window.addEventListener("scroll", scrollVisible);
