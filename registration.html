@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="styles/nysl_mb.css">
+    <script src="https://kit.fontawesome.com/0d8e9db110.js" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -179,16 +181,17 @@
                         </label>
                         <fieldset class="horizontal-fieldset">
                             <p class="strong">Jersey Size:</p>
-                            <ul class="flex sizes-list">
-                                <li><label for="jersey_ys"><input type="radio" name="jersey" value="Youth Small" id="jersey_ys"> <span>Youth Small</span></label></li>
-                                <li><label for="jersey_ym"><input type="radio" name="jersey" value="Youth Medium" id="jersey_ym"><span>Youth Medium</span></label></li>
-                                <li><label for="jersey_yl"><input type="radio" name="jersey" value="Youth Large" id="jersey_yl"><span>Youth Large</span></label></li>
-                                <li><label for="jersey_s"><input type="radio" name="jersey" value="Small" id="jersey_s"><span>Small</span></label></li>
-                                <li><label for="jersey_m"><input type="radio" name="jersey" value="Medium" id="jersey_m"><span>Medium</span></label></li>
-                                <li><label for="jersey_l"><input type="radio" name="jersey" value="Large" id="jersey_l"><span>Large</span></label></li>
-                                <li><label for="jersey_xl"><input type="radio" name="jersey" value="Extra-Large" id="jersey_xl"><span>Extra-Large</span></label></li>
-                            </ul>
-                        </fieldset>
+                            <div class="size-choice-container">
+                                <ul class="flex sizes-list">
+                                    <li><label for="jersey_ys"><input type="radio" name="jersey" value="Youth Small" id="jersey_ys"> <span>Youth Small</span></label></li>
+                                    <li><label for="jersey_ym"><input type="radio" name="jersey" value="Youth Medium" id="jersey_ym"><span>Youth Medium</span></label></li>
+                                    <li><label for="jersey_yl"><input type="radio" name="jersey" value="Youth Large" id="jersey_yl"><span>Youth Large</span></label></li>
+                                    <li><label for="jersey_s"><input type="radio" name="jersey" value="Small" id="jersey_s"><span>Small</span></label></li>
+                                    <li><label for="jersey_m"><input type="radio" name="jersey" value="Medium" id="jersey_m"><span>Medium</span></label></li>
+                                    <li><label for="jersey_l"><input type="radio" name="jersey" value="Large" id="jersey_l"><span>Large</span></label></li>
+                                    <li><label for="jersey_xl"><input type="radio" name="jersey" value="Extra-Large" id="jersey_xl"><span>Extra-Large</span></label></li>
+                                </ul>
+                            </fieldset>
                         <fieldset class="horizontal-fieldset">
                             <p class="strong">Shorts Size:</p>
                             <ul class="flex sizes-list">
@@ -225,6 +228,10 @@
                 </form>
             </div>
         </div>
+        <footer>
+            <p>Created by <a>M.J. Bryan</a></p>
+            <div class="fixed-scroller" id="scroll_btn"><i class="fas fa-arrow-circle-up"></i></div>
+        </footer>
     </div>
     </body>
 </html>

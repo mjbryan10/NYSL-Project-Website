@@ -69,6 +69,7 @@ body {
     grid-column-start: 2;
     grid-column-end: span col2-end;
     grid-row-start: 2;
+    min-height: 500px;
 }
 
 /* --------- * --------- */
@@ -154,7 +155,42 @@ nav a:hover{
 
 }
 /* --------- * --------- */
-/* ------------- GBLOBAL ------------ */
+/* ------------- FOOTER ------------ */
+footer {
+    display: flex;
+    grid-column: 1 / 4;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+footer {
+    font-size:14px;
+}
+/* ------------- GLOBAL ------------ */
+.fixed-scroller{
+    display: block;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+    position: fixed;
+    right:0;
+    bottom:25px;
+    margin-right: -50px;
+    transition: .5s ease;
+}
+.fixed-scroller.active {
+    right:50%;
+    margin-right: -525px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.fixed-scroller i{
+    color: rgba(4,56,79, 1);
+    font-size: 50px;
+    line-height: 50px;
+}
+.fixed-scroller.active:hover{
+    opacity: 1;
+}
 button {
     cursor: pointer;
 }
@@ -400,6 +436,9 @@ fieldset ul {
     .page-container{
         width: 800px;
     }
+    .fixed-scroller.active {
+        margin-right: -375px;
+    } 
 }
 @media screen and (max-width: 800px) {
 
@@ -454,8 +493,12 @@ fieldset ul {
     h2:first-of-type {
         margin: 0;
         border-top: 0;
-}
-
+    }
+    .fixed-scroller.active {
+        margin-right: 0;
+        right: 25px;
+        bottom: 25px;
+    } 
 }
 @media screen and (max-width: 500px){
     .content-container{
@@ -474,5 +517,9 @@ fieldset ul {
     .sizes-list {
         flex-flow: row wrap;
         max-height: 100%;
+    }
+    .fixed-scroller.active{
+        bottom: 25px;
+        right: 25px;
     }
 }
