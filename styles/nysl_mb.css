@@ -59,14 +59,11 @@ body {
     grid-template-columns: 150px 650px;
     grid-template-rows: auto auto;
     box-sizing: border-box;
-    /* column-gap: 3em;
-    row-gap: 3em; */
 }
 .main-header{
     grid-column-start: 1;
     grid-column-end: span col2-end;
     grid-row-start: 1;
-    /* grid-row-end: last-line; */
 }
 .main-container {
     grid-column-start: 2;
@@ -109,7 +106,6 @@ nav ul li {
     text-decoration: none;
     list-style: none;
     color: white;
-    /* vertical-align: middle;s */
 }
 nav a { 
     text-decoration: none;
@@ -118,7 +114,6 @@ nav a {
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 2px solid black;
-    /* border-radius: 25px; */
     padding:0.65em;
     transition: .3s;
     opacity: .8;
@@ -144,14 +139,11 @@ nav a:hover{
     display: block;
     position: absolute;
     margin-left:0;
-    /* margin-top:250px;  */
     margin-top:215px;
     z-index: 100;
     height: 120px;
     width: 120px;
     object-fit: cover;
-    /* background-image: linear-gradient(rgba(4,56,79,1), rgba(4,56,79,0.8)); */
-/* POSSIBLE GRADIENT*/
 }
 .nysl_logo:before {
     content: '';
@@ -273,7 +265,6 @@ ol.remove-style, ul.remove-style, li.remove-style {
     margin:0 auto;
     width:100%;
     text-align: center;
-    /* display: block; */
 }
 .month-schedule th:nth-child(1n) {
     width: 20%;
@@ -281,10 +272,11 @@ ol.remove-style, ul.remove-style, li.remove-style {
 .month-schedule:nth-child(2n){
     margin: 2em auto;
 }
-/* This was the asked for styling:
+/* Note: This was the styling suggested
 .month-schedule tr:first-of-type{
     text-decoration: underline;
-} */
+} 
+However, styling that matches theme added below.*/
 .month-schedule:nth-of-type(odd){
     margin-top: 3em;
 }
@@ -326,9 +318,6 @@ tr.address-location{
 tr.address-location.active {
     border: 2px solid black;
 }
-/* tr.address-location td {
-    margin-right: 1em;
-} */
 .worlds-apart{
     display: flex;
     justify-content: space-between;
@@ -349,13 +338,6 @@ input[type="radio"] {
     width: 1.1em;
 }
 input[type="checkbox"] {
-    /* Possibly consider styling checkboxes later*/
-    /* -webkit-appearance: none; 
-	background-color:white;
-	border: 1px solid black;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	display: inline-block;
-    position: relative; */
     height: 1.1em;
     width: 1.1em;
 }
@@ -413,7 +395,7 @@ fieldset ul {
    -webkit-box-shadow: inset 0 0 0.2em #000000;
    box-shadow:         inset 0 0 0.2em #000000;
 }
-/* ------------- MEDIA (SMALL) ------------ */
+/* ------------- MEDIA QUERIES (SMALL) ------------ */
 @media screen and (max-width: 1100px) {
     .page-container{
         width: 800px;
@@ -451,7 +433,7 @@ fieldset ul {
         
     }
     nav a{
-        padding: 0.65em; /*KEEP AN EYE ON THIS*/ 
+        padding: 0.65em;
         height: 100%;
         box-sizing: border-box;
         border-bottom: 2px solid black;
@@ -468,12 +450,7 @@ fieldset ul {
     }
     nav ul a:last-child {
         border-right:0;
-    }
-    /* .content-container *{
-        margin-right: 3em;
-        margin-left: 3em;
-    } */
-    
+    } 
     h2:first-of-type {
         margin: 0;
         border-top: 0;
