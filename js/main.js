@@ -45,6 +45,16 @@ scrollBtn.addEventListener("click", function(){ //Caller
     smoothScroll('h1', 1000);
 });
 //------
+
+
+
+//HAMBURGER
+let burgerToggle = function(toggle1, toggle2){
+    toggle1.classList.toggle('active');
+    toggle2.classList.toggle('hidden');
+    // if toggle1.classList
+}
+
 // --- UNIFORM GREYOUT ---
 let greyOut = function(trigger, greyTar, unCheck){
     for (grey of greyTar){ //toggles grey class
@@ -60,11 +70,6 @@ let greyOut = function(trigger, greyTar, unCheck){
         }
     }    
 }
-//-----
-
-
-
-
 
 
 window.onload = function () {
@@ -73,13 +78,20 @@ window.onload = function () {
     for (let i=0; i<locations.length; i++){
         locations[i].addEventListener("click", mapActivate);
     }
-    //UNIFORM
-    let uniforms = document.querySelectorAll(".uniform-options");
-    let uniformCheck = document.querySelector('#uniform');
-    let unCheckUniform = document.querySelectorAll(".sizes-list input");
-    uniformCheck.addEventListener("change", function(){
-        greyOut(uniformCheck, uniforms, unCheckUniform);
+    //BURGER
+    let menu = document.querySelector('.hamburger-menu');
+    let burgerId = document.querySelector('#hamburger_id');
+    let nav = document.querySelector('nav');
+    burgerId.addEventListener("click", function(){
+        burgerToggle(menu, nav);
     });
+     //UNIFORM
+     let uniforms = document.querySelectorAll(".uniform-options");
+     let uniformCheck = document.querySelector('#uniform');
+     let unCheckUniform = document.querySelectorAll(".sizes-list input");
+     uniformCheck.addEventListener("change", function(){
+         greyOut(uniformCheck, uniforms, unCheckUniform);
+     });
 }
 
 let scrollVisible = function() { //makes scroll btn visible if page is longer than height px
@@ -96,3 +108,5 @@ let scrollVisible = function() { //makes scroll btn visible if page is longer th
 };
 
 window.addEventListener("scroll", scrollVisible);
+
+
