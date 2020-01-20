@@ -125,7 +125,7 @@ let h3s = document.querySelectorAll('.rules-container h3');
 
 for (h3 of h3s) {
     h3.addEventListener('click', function(){
-        console.log(this.nextElementSibling);
+        // console.log(this.nextElementSibling);
         this.classList.toggle('active');
         this.nextElementSibling.classList.toggle('show');
     });
