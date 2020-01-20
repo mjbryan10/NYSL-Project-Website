@@ -110,3 +110,42 @@ let scrollVisible = function() { //makes scroll btn visible if page is longer th
 window.addEventListener("scroll", scrollVisible);
 
 
+
+let h4s = document.querySelectorAll('.rules-container h4');
+
+for (h4 of h4s){
+    h4.addEventListener('click', function(){
+        this.classList.toggle('active');
+    });
+}
+
+// let h3Ol = document.querySelectorAll('.rules-container h3+ol');
+// let h3Ul = document.querySelectorAll('.rules-container h3+ul');
+let h3s = document.querySelectorAll('.rules-container h3');
+
+for (h3 of h3s) {
+    h3.addEventListener('click', function(){
+        console.log(this.nextElementSibling);
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('show');
+    });
+}
+
+
+
+
+// let collapseList = function(trigger, target) {
+//     let trigTag = this.tagName;
+
+    
+// }
+// let accordianFunc = function(){
+//     let thisTag = this.tagName;
+//     let ol = document.querySelector(`${this}+ol`);
+//     let ul = document.querySelector(`${this}+ul`);
+//     if (this.classList.contains('active')){
+        
+//     } else {
+
+//     }
+// }

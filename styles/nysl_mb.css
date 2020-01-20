@@ -323,6 +323,55 @@ ol.ol-letter {
 ol.remove-style, ul.remove-style, li.remove-style {
     list-style: none;
 }
+/* .rules-container h3+ul{
+    font-size: 0;
+}
+.rules-container li {
+    font-size: 0;
+}
+.rules-container li h4 {
+    font-size: 1rem;
+} */
+.rules-container li h4, .rules-container h3 {
+    cursor: pointer;
+   
+}
+.rules-container h3:after, .rules-container li h4:after{
+    content: ' + ';
+    color: rgb(4,56,79);
+    /* font-size: .75em; */
+    font-weight: normal;
+}
+.rules-container h3.active:after, .rules-container li h4.active:after{
+    content: ' - ';
+    color: rgb(4,56,79);
+    display: inline;
+    /* font-size: .75em; */
+    font-weight: normal;
+}
+
+/* .rules-container li h4.active:after{
+    content:'';
+} */
+.rules-container li h4+span {
+    font-size: 0;
+    transition: .5s ease ;
+}
+.rules-container li h4.active+span{
+    font-size: 1em;
+}
+/* .rules-container li h4+span {
+    color:blue;
+} */
+.rules-container h3+ol, .rules-container h3+ul{
+    transition: .5s ease;
+    font-size: 0;
+}
+.rules-container h3+ol.show, .rules-container h3+ul.show{
+    /* height: 0; */
+    /* overflow: hidden; */
+    font-size: 1em;
+}
 /* ------------- GAMES ------------ */
 .games-container p span {
     font-weight: bold;
