@@ -577,15 +577,15 @@ fieldset ul {
     .hamburger-menu {
         font-family: inherit;
         width: 100%;
-        background-color: rgb(4,56,79);
-        background-color: rgb(4,56,79);
+        background-color: rgb(146, 230, 83);
+        /* background-color: rgb(4,56,79); */
         border-top: 2px solid black;
         border-left: 2px solid black;
         border-right: 2px solid black;
         padding:0.65em;
         transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        opacity: .8;
-        color: white;
+        opacity: .9;
+        color: rgb(4,56,79);
         display: flex;
         flex-flow: row nowrap;
         cursor: pointer;
@@ -613,7 +613,8 @@ fieldset ul {
     .hamburger-container span {
         height: 4px;
         width: 33px;
-        background-color: white;
+        /* background-color: white; */
+        background-color: rgb(4,56,79);
         display: block;
         border-radius: 3px;
         position: relative;
@@ -644,4 +645,9 @@ fieldset ul {
     .hamburger-menu>span{
         width: 100%;
     }
+    /* .hamburger-menu.active>span {
+        text-decoration: line-through;
+        font-size: 0;
+        min-height: 16px;
+    } */
 }
